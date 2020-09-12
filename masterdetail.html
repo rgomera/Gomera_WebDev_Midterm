@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Master Detail Pattern</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        .title {
+            position: relative;
+            left: 275px;
+            margin: 100px 0px 30px 0px;
+        }
+
+        .container {
+            display: flex;
+            border: solid 2px #333;
+            
+            width: 800px;
+            margin: 0px auto;
+        }
+
+        .master-trigger {
+            border-right: solid 2px #333;
+        }
+
+        .master-trigger ul {
+            padding: 0;
+        }
+        
+        .trigger-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 200px;
+            list-style: none;
+        }
+
+        .trigger-list {
+            margin: 0;
+        }
+
+        .trigger-list li  {
+            vertical-align: middle;
+            border-bottom: solid 2px #333;
+        }
+
+        .trigger-list li div, .trigger-list li label {
+            display: block;
+            width: 200px;
+
+            text-align: center;
+            padding: 15px 0px;
+        }
+        
+        .trigger-list li:nth-child(2):hover,
+        .trigger-list li:nth-child(3):hover,
+        .trigger-list li:nth-child(4):hover,
+        .trigger-list li:nth-child(5):hover,
+        .trigger-list li:nth-child(6):hover  {
+            background-color: #a9a9a9b9;
+        }
+        
+        .trigger-list li label {
+            cursor: pointer;
+        }
+
+        .details {
+            display: none;
+        }
+
+       .radioHide {
+            display: none;
+        }
+
+        input:checked + .details {
+            display: block;
+        }
+
+        .calendar-details {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .wishlist-details {
+            z-index: 10;
+            position: absolute;
+
+            width: 600px;
+            margin: 20px 0px 0px 135px;
+        }
+
+        .detail-container {
+           margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Master Detail Pattern</h1>
+    <div class="container">
+        <div class="master-trigger">
+            <ul class="trigger-list">
+                <li><div id="activites"><strong>Activities</strong></div></li>
+                <!--Master list-->
+                <li><label for="tab1">Registration Page</label></li>
+                <li><label for="tab2">Calendar Page</label></li>
+                <li><label for="tab3">Wish list Page</label></li>
+                <li><label for="tab4">Markup Page</label></li>
+                <li><label for="tab5">Poem Page</label></li>
+            </ul>
+        </div>
+        <div class="details-container">
+            <div class="detail-container">
+                <!--detail of registration.html-->
+                <input class="radioHide" checked type="radio" id="tab1" name="master-details"/>
+                <div class="details">
+                    <div>
+                        <div align="center">
+                            <h1>User Account Registration Form</h1>
+                            <p>This registration form allow user to enter their relevant data and
+                               <br/>allow them to create their own account. all input forms are<strong> REQUIRED</strong>
+                               <br/>means it must be filled in for the completion of the registration. In addition, all 
+                               <br/>the gathered data are secured and assured its confidentiality.
+                            </p>
+                        </div>
+                        <br/>
+                        <hr width="500px"/>
+                        <br/>
+                        <div align="center" style="width: 600px; margin: 0 auto;">
+                            <form action=""> 
+                                <table >
+                                    <tr>
+                                        <td colspan="2" align="right">
+                                            <label for="txtUsername">Username: &nbsp;&nbsp;</label>
+                                            <input type="text" id="txtUsername" name="txtUsername" required>
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="fldEmail">Email: &nbsp;&nbsp;</label>
+                                            <input type="email" id="fldEmail" name="fldEmail" placeholder="email@address.com" required>    
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="fldPassword">Password: &nbsp;&nbsp;</label>
+                                            <input type="password" id="fldPassword" name="fldPassword" required>    
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="txtFname">First Name: &nbsp;&nbsp;</label>
+                                            <input type="text" id="txtFname" name="txtFname" required>    
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="txtLname">Last Name: &nbsp;&nbsp;</label>
+                                            <input type="text" id="txtLname" name="txtLname" required>    
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="radioGender">Gender: &nbsp;</label>
+                                            <input type="radio" id="radioGender" name="radioGender" value="Male" required> 
+                                            <label for="radioGender">Male</label>
+                                            <input type="radio" id="radioGender" name="radioGender" value="Female" required> 
+                                            <label for="radioGender">Female</label>   
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="drpCountry">Country: &nbsp;&nbsp;</label>
+                                            <select name="drpCountry" id="drpCountry" >
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="United States">United States</option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="France">France</option>
+                                            </select>   
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="pickerBdate">Birth Date: &nbsp;&nbsp;</label>
+                                            <input type="date" id="pickerBdate" name="pickerBdate" required>    
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="fldTel">Telephone #: &nbsp;&nbsp;</label>
+                                            <input type="tel" id="fldTel" name="fldTel" placeholder="(xxx)-xxx-xxxx" required/>    
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <label for="textDname">Display Name: &nbsp;&nbsp;</label>
+                                            <input type="text" id="textDname" name="textDname" required>    
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td colspan="2">
+                                            <input type="checkbox" id="chkboxAgreement" name="chkboxAgreement" value="I agree to the Terms of Service and Privacy Policy" required>    
+                                            <label for="chkboxAgreement">I agree to the <em>Terms of Service</em> and <em>Privacy Policy</em></label>
+                                        </td>
+                                    </tr>   
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td >
+                                            <button type="reset" id="btnReset">Reset</button>
+                                        </td>
+                                    </tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr><td colspan="2" align="right"></td></tr>
+                                    <tr align="right">
+                                        <td>
+                                            <button type="submit" id="btnCreate">Create Account</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <br/>
+                        <hr width="500px"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-container">
+                 <!--detail of calendar.html-->
+                <input class="radioHide" type="radio" id="tab2" name="master-details"/>
+                <div class="details">
+                    <div class="calendar-details">
+                        <h1 align="center">Calendar</h1>
+                        <table border="1" align="center" width="500" style="border-collapse: collapse;">
+                            <tr height="35px">
+                                <th align="center" colspan="7">January 2001</th>
+                            </tr>
+                            <tr height="35px">
+                                <th align="center">Sun</th>
+                                <th align="center">Mon</th>
+                                <th align="center">Tue</th>
+                                <th align="center">Wed</th>
+                                <th align="center">Thu</th>
+                                <th align="center">Fri</th>
+                                <th align="center">Sat</th>
+                            </tr>
+                            <tr height="35px">
+                                <td align="center"></td>
+                                <td align="center">1</td>
+                                <td align="center">2</td>
+                                <td align="center">3</td>
+                                <td align="center">4</td>
+                                <td align="center">5</td>
+                                <td align="center">6</td>
+                            </tr>
+                            <tr height="35px">
+                                <td align="center">7</td>
+                                <td align="center">8</td>
+                                <td align="center">9</td>
+                                <td align="center">10</td>
+                                <td align="center">11</td>
+                                <td align="center">12</td>
+                                <td align="center">13</td>
+                            </tr>
+                            <tr height="35px">
+                                <td align="center">14</td>
+                                <td align="center">15</td>
+                                <td align="center">16</td>
+                                <td align="center">17</td>
+                                <td align="center">18</td>
+                                <td align="center">19</td>
+                                <td align="center">20</td>
+                            </tr>
+                            <tr height="35px">
+                                <td align="center">21</td>
+                                <td align="center">22</td>
+                                <td align="center">23</td>
+                                <td align="center">24</td>
+                                <td align="center">25</td>
+                                <td align="center">26</td>
+                                <td align="center">27</td>
+                            </tr>
+                            <tr height="35px">
+                                <td align="center">28</td>
+                                <td align="center">29</td>
+                                <td align="center">30</td>
+                                <td align="center">31</td>
+                                <td align="center"></td>
+                                <td align="center"></td>
+                                <td align="center"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-container">
+                 <!--detail of wishlist.html-->
+                <input class="radioHide" type="radio" id="tab3" name="master-details"/>
+                <div class="details">
+                    <div class="wishlist-details">
+                        <h1>My Wishlist: </h1>
+                        <ol>
+                            <li>I want to be a successful person</li>
+                            <li>I want to build the dream house of my parent</li>
+                            <li>I want to have a high-end PC</li>
+                            <li>I want to go to Japan</li>
+                            <li>I want to get married and have meaningful life</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-container">
+                 <!--detail of markup.html-->
+                <input class="radioHide" type="radio" id="tab4" name="master-details"/>
+                <div class="details">
+                    <h1 align="center">Never Give Up</h1>
+                    <p align="center"><strong>I am a man will be successful</strong>, in order that to happen I must surpass all the challenges even though its painful.
+                      <br/> I faced all challenges with <em>passion, hardwork and determination</em>.
+                      <br/> <em>I committed mistakes along the way but never giveup is my way</em>.
+                      <br/> Learned from those mistakes and make me a better one.
+                      <br/> Doing the <strong>things that I enjoy the most makes me a successful one</strong>.
+                      <br/> Never Giveup is my way, if I dont have a strength to face the challenges along the way. 
+                      <br/> <strong>To God I always pray</strong>, I am a man who never give up.
+                     </p>
+                </div>
+            </div> 
+            
+            <div class="detail-container">
+                 <!--detail of poem.html-->
+                <input class="radioHide" type="radio" id="tab5" name="master-details"/>
+                <div class="details">
+                    <h1 align="center">Never Give Up</h1>
+                    <p align="center">I am a man will be successful, in order that to happen I must surpass the all the challenges even though its painful.
+                    <br/> I faced all challenges with passion, hardwork and determination.
+                    <br/> I committed mistakes along the way but never giveup is my way.
+                    <br/> Learned from those mistakes and make me a better one.
+                    <br/> Doing the things that I enjoy the most makes me a successful one.
+                    <br/> Never Giveup is my way, if I dont have a strength to face the challenges along the way. 
+                    <br/> To God I always pray, I am a man who never give up.
+                    </p>    
+                </div>
+            </div>         
+        </div>
+    </div>
+</body>
+</html>

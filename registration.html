@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Account Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <div align="center">
+            <h1>User Account Registration Form</h1>
+            <p>This registration form allow user to enter their relevant data and
+               <br/>allow them to create their own account. all input forms are<strong> REQUIRED</strong>
+               <br/>means it must be filled in for the completion of the registration. In addition, all 
+               <br/>the gathered data are secured and assured its confidentiality.
+            </p>
+        </div>
+        <br/>
+        <hr width="500px"/>
+        <br/>
+        <div align="center" style="width: 800px; margin: 0 auto;">
+            <form action=""> 
+                <table >
+                    <tr>
+                        <td colspan="2" align="right">
+                            <label for="txtUsername">Username: &nbsp;&nbsp;</label>
+                            <input type="text" id="txtUsername" name="txtUsername" required>
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="fldEmail">Email: &nbsp;&nbsp;</label>
+                            <input type="email" id="fldEmail" name="fldEmail" placeholder="email@address.com" required>    
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="fldPassword">Password: &nbsp;&nbsp;</label>
+                            <input type="password" id="fldPassword" name="fldPassword" required>    
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="txtFname">First Name: &nbsp;&nbsp;</label>
+                            <input type="text" id="txtFname" name="txtFname" required>    
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="txtLname">Last Name: &nbsp;&nbsp;</label>
+                            <input type="text" id="txtLname" name="txtLname" required>    
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="radioGender">Gender: &nbsp;</label>
+                            <input type="radio" id="radioGender" name="radioGender" value="Male" required> 
+                            <label for="radioGender">Male</label>
+                            <input type="radio" id="radioGender" name="radioGender" value="Female" required> 
+                            <label for="radioGender">Female</label>   
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="drpCountry">Country: &nbsp;&nbsp;</label>
+                            <select name="drpCountry" id="drpCountry" >
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Germany">Germany</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Australia">Australia</option>
+                                <option value="United States">United States</option>
+                                <option value="Norway">Norway</option>
+                                <option value="France">France</option>
+                            </select>   
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="pickerBdate">Birth Date: &nbsp;&nbsp;</label>
+                            <input type="date" id="pickerBdate" name="pickerBdate" required>    
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="fldTel">Telephone #: &nbsp;&nbsp;</label>
+                            <input type="tel" id="fldTel" name="fldTel" placeholder="(xxx)-xxx-xxxx" required/>    
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <label for="textDname">Display Name: &nbsp;&nbsp;</label>
+                            <input type="text" id="textDname" name="textDname" required>    
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td colspan="2">
+                            <input type="checkbox" id="chkboxAgreement" name="chkboxAgreement" value="I agree to the Terms of Service and Privacy Policy" required>    
+                            <label for="chkboxAgreement">I agree to the <em>Terms of Service</em> and <em>Privacy Policy</em></label>
+                        </td>
+                    </tr>   
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td >
+                            <button type="reset" id="btnReset">Reset</button>
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr><td colspan="2" align="right"></td></tr>
+                    <tr align="right">
+                        <td>
+                            <button type="submit" id="btnCreate">Create Account</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <br/>
+        <hr width="500px"/>
+    </div>
+    
+</body>
+</html>
