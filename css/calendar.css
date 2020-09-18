@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+* {
+    color: #333;
+    font-family: 'Heebo', sans-serif;
+}
+
+body {
+    background-image: url("../img/calendar.jpg");
+    background-size: cover;
+}
+
+#calendar-header-title {
+    font-weight: lighter;
+    line-height: 80%;
+}
+
+table, tr, th, td {
+    border: 1px solid #333;
+}
+
+.holiday {
+    background-color: #f36565;
+}
+
+.holiday span {
+    color: #FFF;
+}
+
+.saturday {
+    background-color: #8bb9ff;
+}
+
+.saturday span {
+    color: #FFF;
+}
+
+#my-birthday {
+    background-color: #f8f886;
+}
+
+
+
+
