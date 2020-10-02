@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    color: #222;
+    font-size: 20px;
+    scroll-behavior: smooth;
+    background-color: #f2f2f2de;
+    font-family: "Varela Round", sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: 550px;
+    color: #c4c4c4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    background-color: rgba(34, 34, 34, 0.85);
+    background-image: url("../images/top-header-bg-120res.jpg");   
+
+    padding: 20px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav {
+    list-style: none;
+}
+
+.links {
+    text-decoration:none;
+}
+
+.brand {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0px 30px;
+    font-size: 0.70rem;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 90px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-image: url("../images/brand-logo.png");
+    text-decoration: none;
+
+    position: relative;
+    z-index: 10;
+    filter: invert(90%);
+}
+
+.main-nav ul li {
+    display: inline-block;
+}
+
+.main-nav ul li a {
+    color: #cccccc;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    padding: 8px 15px;
+    margin: 0px 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.nav-links li:last-child {
+    padding-right: 50px;
+}
+
+.banner {
+    margin-top: 70px;
+    margin-left: 8%;
+    width: 600px;
+}
+
+.title-header-small {
+    font-size: 1.6rem;
+    margin: 90px 0px 50px 0px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.title-header-big {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+    margin: 100px 0px 0px 0px;
+}
+
+.banner span {
+    font-size: 0.75rem;
+    opacity: 80%;
+}
+
+.banner-button {
+    display: block;
+    width: 210px;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: #c4c4c4;
+    padding: 10px 35px;
+    margin: 20px 0px 0px 0px;
+    border: solid 1px #c4c4c4;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 0px;
+    text-decoration: none;
+}
+
+.banner-button:hover {
+    background-color: rgba(255, 255, 255,0.7);
+    border: solid 1px #222;
+    color: #222;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: right;
+    background-image: url("../images/profile-pic.png");
+    margin: 0 auto 40px auto;
+}
+
+.about-me-section {
+    width: 850px;
+    margin: 0px auto;
+    font-size: 0.80rem;
+    text-align: center;
+}
+
+.description {
+    margin-bottom: 50px;
+}
+
+.skills-title {
+    text-align: center;
+}
+
+.skills-container, .projets-container {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    justify-content: space-around;
+}   
+
+.skills-container > div {
+    margin: 0px 10px 20px 10px;
+}
+
+.icon-size {
+    width: 150px;
+    height: 150px;
+}
+
+.skill-bar {
+    width: 150px;
+    background-color: #c4c4c4;
+    border-radius: 100px;
+    position: relative;
+}
+
+
+.html-icon {
+    background-image: url("../images/html-icon.png");
+    background-size: cover;
+}
+
+.html-skill-percent, .css-skill-percent {
+    width: 80%;
+    height: 100%;
+    background-color: #222;
+    border-radius: 100px;
+    text-align: center;
+    color: #c4c4c4;
+    font-size: 0.80rem;
+}
+
+.css-icon {
+    background-image: url("../images/css-icon.png");
+    background-size: cover;
+}
+
+.javascript-icon {
+    background-image: url("../images/javascript-icon.png");
+    background-size: cover;
+}
+
+.javascript-skill-percent, .bootstrap-skill-percent {
+    width: 50%;
+    height: 100%;
+    background-color: #222;
+    border-radius: 100px;
+    text-align: center;
+    color: #c4c4c4;
+    font-size: 0.80rem;
+}
+
+.bootstrap-icon {
+    background-image: url("../images/bootstrap-icon.png");
+    background-size: cover;
+}
+
+.java-icon {
+    background-image: url("../images/java-icon.png");
+    background-size: cover;
+}
+
+.java-skill-percent, .ps-skill-percent, .ai-skill-percent, .xd-skill-percent {
+    width: 75%;
+    height: 100%;
+    background-color: #222;
+    border-radius: 100px;
+    text-align: center;
+    color: #c4c4c4;
+    font-size: 0.80rem;
+}
+
+.ps-icon {
+    background-image: url("../images/ad-ps-icon.png");
+    background-size: cover;
+}
+
+.ai-icon {
+    background-image: url("../images/ad-ai-icon.png");
+    background-size: cover;
+}
+
+.xd-icon {
+    background-image: url("../images/ad-xd-icon.png");
+    background-size: cover;
+}
+
+.projets-container ul {
+    margin: 0px;
+}
+
+.projets-container ul li {
+    margin: 20px 0px;
+}
+
+.projets-container ul li a {
+    color: #222;
+    text-decoration: none;
+}
+
+.projets-container ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-section {
+    width: 100%;
+    margin: 60px auto 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #222;
+}
+
+.footer-section > div {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section > div a {
+    margin: 0px 15px 30px 15px;
+}
+
+.footer-title {
+    margin: 40px 0px 30px 0px;
+    color: #c4c4c4;
+}
+
+.footer-icon-size {
+    padding: 15px;
+}
+
+.facebook-icon {
+    background-image: url("../images/facebook-icon.png");
+    background-repeat: none;
+    background-size: cover;
+    filter: invert(90%);
+}
+
+.github-icon {
+    background-image: url("../images/github-icon.png");
+    background-repeat: none;
+    background-size: cover;
+    opacity: 0.90;
+}
+
+.gmail-icon {
+    background-image: url("../images/gmail-icon.png");
+    background-repeat: none;
+    background-size: cover;
+    filter: invert(90%);
+}
+
+.copy-right {
+    margin: 0px;
+    font-size: 0.60rem;
+    background-color: rgb(88, 88, 88);
+}
+
+.back-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-size: cover;
+    z-index: 100;
+    background-image: url("../images/back-icon.png");
+
+    position: fixed;
+    top: 90%;
+    left: 93%;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    filter: invert();
+}
+
+
+
+
+
+
+
+
+

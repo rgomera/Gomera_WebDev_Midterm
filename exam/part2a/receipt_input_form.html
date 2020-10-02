@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Invoice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-top-section top-bgcolor">
+            <div class="form-top-section-1">
+                <div class="form-top-section-logo">
+                    <form action="">
+                        <input class="text-center" type="file" accept="image/png, image/jpeg" id="company-logo" name="company-logo">
+                    </form>
+                </div>
+                <div class="form-top-company-info">
+                    <form action="">
+                        <input type="text" placeholder="Company Name:" id="compnany-name" name="compnany-name">
+                    </form>
+                    <form action="">
+                        <input type="text" placeholder="Company Address:" id="compnany-address" name="compnany-address">
+                    </form>
+                    <form action="">
+                        <input type="text" value="" placeholder="Company Tel#:" id="compnany-telnum" name="compnany-temlnum">
+                    </form>
+                </div>
+            </div>
+            <div class="form-top-section-2 top-bgcolor">
+                <h1>INVOICE</h1>
+                <form action="">
+                    <input placeholder="Date:" type="date" id="invoice-date" name="invoice-date">
+                </form>
+                <form action="">
+                    <input placeholder="Invoice No:" type="number" id="invoice-num" name="invoice-num">
+                </form>
+            </div>
+        </div>
+
+        <div class="form-note">
+            &lt;Payment term (due on receipt, due in X days)&gt;
+        </div>
+        <div class="form-middle-section">
+            <div class="form-middle-section-1">
+                <div class="form-middle-header">
+                    BILL TO
+                </div>
+                <form action="">
+                    <input placeholder="Contact Name:" type="text" id="bt-cname" name="bt-cname">
+                </form>
+                <form action="">
+                    <input placeholder="Client Company Name:" type="text" id="cl-company-name" name="cl-company-name">
+                </form>
+                <form action="">
+                    <input placeholder="Address:" type="text" id="bt-address" name="bt-address">
+                </form>
+                <form action="">
+                    <input placeholder="Phone:" type="tel" id="bt-phone" name="bt-phone">
+                </form>
+                <form action="">
+                    <input placeholder="Email:" type="email" id="bt-email" name="bt-email">
+                </form>
+            </div>
+
+            <div class="form-middle-section-2"> 
+                <div class="form-middle-header">
+                    SHIP TO
+                </div>
+                <form action="">
+                    <input placeholder="Name/Dept:" type="text" id="bt-cname" name="bt-cname">
+                </form>
+                <form action="">
+                    <input placeholder="Client Company Name:" type="text" id="cl-company-name" name="cl-company-name">
+                </form>
+                <form action="">
+                    <input placeholder="Address:" type="text" id="bt-address" name="bt-address">
+                </form>
+                <form action="">
+                    <input placeholder="Phone:" type="tel" id="bt-phone" name="bt-phone">
+                </form>
+            </div>
+        </div>
+
+        <table class="form-table">
+            <tr>
+                <th id="th-description">DESCRIPTION</th>
+                <th id="th-qty">QTY</th>
+                <th id="th-up">UNIT PRICE</th>
+                <th id="th-total">TOTAL</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>0.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>0.00</td>
+            </tr>
+        </table>
+
+        <div class="remarks-label">
+            Remarks / Payment Instructions:
+        </div>
+
+        <div class="amounts-container">
+            <div>
+                <span>SUBTOTAL</span>
+                <span>0.00</span>
+            </div>
+            <div>
+                <span>DISCOUNT</span>
+                <span>0.00</span>
+            </div>
+            <div>
+                <span>SUBTOTAL LESS DISCOUNT</span>
+                <span>0.00</span>
+            </div>
+            <div>
+                <span>TAX RATE</span>
+                <span>0.00</span>
+            </div>
+            <div>
+                <span>TOTAL TAX</span>
+                <span>0.00</span>
+            </div>
+            <div>
+               <span>SHIPPING HANDLING</span>
+               <span>0.00</span>
+            </div>
+            <div>
+                <span>Balance Due</span>
+                <span id="balance-due">$ -</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
