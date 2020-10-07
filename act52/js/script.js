@@ -85,9 +85,6 @@ form.addEventListener('submit', (e) => {
     }
 });
 
-function submitMessagee() {
-   
-}
 
 
 
